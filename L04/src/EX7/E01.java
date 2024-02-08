@@ -25,28 +25,30 @@ public class E01 {
     {
         String team = "";
 
-        if (!isBoy)
-            if (age < 8)
-            {
-                return team = "Tumbling girls";
-            }
-            else
-            {
-                return team = "Springy girls";
-            }
         if (isBoy)
-        {
             if (age < 8)
             {
-                return team = "Young cubs";
+                team = "Young cubs";
+
             }
             else
             {
-                return team = "Cool boys";
-            }
-        }
+                team = "Cool boys";
 
-        return "Error";
+            }
+            else
+         {
+            if (age < 8)
+            {
+                team = "Tumbling girls";
+            }
+            else
+            {
+                team = "Springy girls";
+            }
+         }
+
+        return team;
 
     }
 
