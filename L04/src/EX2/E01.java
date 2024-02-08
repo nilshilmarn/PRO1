@@ -16,6 +16,8 @@ public class E01 {
         int[] array = {a , b, c};
 
 
+            boolean hej = false;
+
         boolean increasing = true;
         boolean decreasing = true;
 
