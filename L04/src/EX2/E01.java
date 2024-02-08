@@ -15,9 +15,6 @@ public class E01 {
         // Store them in an array
         int[] array = {a , b, c};
 
-
-            boolean hej = false;
-
         boolean increasing = true;
         boolean decreasing = true;
 
