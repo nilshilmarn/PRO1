@@ -26,24 +26,26 @@ public class E01 {
 
         if (age == 0)
         {
-            return institution = "Home";
+            institution = "Home";
         }
         else if (age == 1 || age == 2)
         {
-            return institution = "Nursery";
+            institution = "Nursery";
         }
-        else if (age == 3 || age == 4 || age == 5)
+        else if (age >= 3 && age <= 5 )
         {
-            return institution = "Kindergarten";
+            institution = "Kindergarten";
         }
-        else if (age > 5 && age < 17)
+        else if (age >= 6 && age <= 16)
         {
-            return institution = "School";
+            institution = "School";
         }
         else
         {
-            return institution = "Out of school";
+            institution = "Out of school";
         }
+
+        return institution;
 
     }
 
