@@ -44,17 +44,17 @@ public class E01 {
             season =  "Efterår";
         }
 
-        if (month == 2 || month == 5 || month == 8 || month == 11 && day >= 21)
+        if ((month == 2 || month == 5 || month == 8 || month == 11) && day >= 21)
         {
-            if (season == "Vinter")
+            if (season.equals("Vinter")) // season.equals("Vinter")
             {
                 season = "Forår";
             }
-            else if (season == "Forår")
+            else if (season.equals("Forår"))
             {
                 season = "Sommer";
             }
-            else if (season == "Sommer")
+            else if (season.equals("Sommer"))
             {
                 season = "Efterår";
             }
