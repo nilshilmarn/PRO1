@@ -6,7 +6,7 @@ public class E03 {
     public static void main(String[] args)
     {
 
-        System.out.println(sumOddDigits(1010));
+        System.out.println(sumOddDigits(123));
 
     }
 
