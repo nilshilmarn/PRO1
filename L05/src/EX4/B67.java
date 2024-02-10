@@ -29,7 +29,7 @@ public class B67 {
     {
 
         int i = 0;
-        double sum = investmentAmount;
+        double futureValue = investmentAmount;
 
         double rate = montlyInterestRate / 100;
 
@@ -37,12 +37,12 @@ public class B67 {
         {
             // System.out.println(sum);
 
-            sum += rate * sum;
+            futureValue += rate * futureValue;
 
             i++;
         }
 
-        return sum;
+        return futureValue;
 
     }
 
