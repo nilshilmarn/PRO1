@@ -26,23 +26,37 @@ public class B66
 
         while (i <= n)
         {
+            /*
+             * Left aligned
+             * */
+
+//            int j = 1; // Reset j to 1 to print 1 -> n
+//
+//            while (j - 1 < i)
+//            {
+//                System.out.print(j + " ");
+//                j++;
+//            }
+
+            /*
+             * Right aligned
+             * */
 
             int k = 0; // Reset k to 0
 
-            // Comment this while loop out to make the pattern right-aligned
             while (k < spaces)
             {
                 System.out.print("  ");
                 k++;
             }
 
-            int j = 1; // Reset j to 1 to print 1 -> n
+            int j = i; // Reset j to 1 to print 1 -> n
 
-            while (j - 1 < i)
-            {
+            while (j > 0) {
                 System.out.print(j + " ");
-                j++;
+                j--;
             }
+
 
             System.out.println();
             spaces--;
