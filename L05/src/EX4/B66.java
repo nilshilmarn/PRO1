@@ -23,6 +23,7 @@ public class B66
 
         int i = 0;
         int spaces = n - 1; // if n = 3 -> 4, 2, 0 <-> (3-2) * 2 = 4, (2 - 1) * 2 = 2, (1-1) * 2 = 0
+                            // spaces = 2 * n - 2 = 2 * (n - 1)
 
         while (i < n)
         {
@@ -44,18 +45,29 @@ public class B66
 
             int k = 0; // Reset k to 0
 
-            while (k < spaces)
+            while (k < 2 * spaces) // spaces = 2 * n - 2 = 2 * (n - 1)
             {
-                System.out.print("  ");
+                System.out.print(" ");
                 k++;
             }
 
-            int j = i + 1;
 
-            // 1) i = 0, 2) i = 1, i = 0, 3) etc.
-            while (j > 0) {
-                System.out.print(j + " ");
-                j--;
+//            int j = i + 1;
+//
+//            // 1) i = 0, 2) i = 1, i = 0, 3) etc.
+//            while (j > 0) {
+//                System.out.print(j + " ");
+//                j--;
+//            }
+
+            int j = 1; // Reset j to 1 to print 1 -> i
+
+            while (j - 1 <= i)
+            {
+
+                System.out.printf("%2d ", j);
+
+                j++;
             }
 
 
