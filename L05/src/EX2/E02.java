@@ -23,7 +23,6 @@ public class E02 {
         // 2, 4, 6, 8, 10, 12, 14, 16
 
         int sum = 0;
-        int even = 0;
 
         while (lower < upper)
         {
