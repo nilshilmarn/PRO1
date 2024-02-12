@@ -15,12 +15,12 @@ public class B67 {
         System.out.println("Enter annual interest rate: ");
         double annualInterestRate = input.nextDouble();
 
-        // System.out.println("Enter amount of years: ");
-        // int years = input.nextInt();
+         System.out.println("Enter amount of years: ");
+         int years = input.nextInt();
 
         // System.out.println(futureInvestmentValue(investmentAmount, annualInterestRate / 12, years));
 
-        printTable(investmentAmount, annualInterestRate);
+        printTable(investmentAmount, annualInterestRate, years);
 
     }
 
@@ -46,11 +46,10 @@ public class B67 {
 
     }
 
-    public static void printTable(double investmentAmount, double annualInterestRate)
+    public static void printTable(double investmentAmount, double annualInterestRate, int years)
     {
 
         int i = 1;
-        int years = 30;
 
         System.out.println("Years      Future Value ");
 
