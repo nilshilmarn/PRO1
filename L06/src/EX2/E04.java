@@ -13,23 +13,35 @@ public class E04
 
         int repatedNumber = 0;
         int lastNumber = 0;
-
-
+        int count = 1;
 
         for (int i = 0; i < 10; i++)
         {
 
             int currentNumber = input.nextInt();
 
-            if (currentNumber == lastNumber)
+            if (currentNumber == lastNumber) // 1 2 2 2
             {
-               repatedNumber = repatedNumber * 10 + currentNumber;
+                lastNumber = currentNumber;
+                count++;
+            }
+            else
+            {
+                if (count > 1)
+                {
+                    System.out.println(lastNumber + " ");
+                    lastNumber = currentNumber;
+                    count = 1;
+                }
+
             }
 
             lastNumber = currentNumber;
         }
+        if (count > 1) {
+            System.out.println(lastNumber + " ");
+        }
 
-        System.out.println(repatedNumber);
     }
 
 }
