@@ -27,13 +27,13 @@ public class B539
                 commission = (salesAmount - (2 * baseSalary)) * 0.1 + baseSalary * 0.06 + baseSalary * 0.08;
             }
 
-            totalSalary = salesAmount + commission;
+            totalSalary = baseSalary + commission;
 
             System.out.printf("%5d \t\t\t %8.2f\n", salesAmount, totalSalary);
 
             salesAmount += 1000;
 
-        } while(salesAmount <= 10000);
+        } while(totalSalary < 30000);
 
 
 
