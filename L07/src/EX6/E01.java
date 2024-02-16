@@ -9,7 +9,7 @@ public class E01
     public static void main(String[] args)
     {
 
-        int[] a = {0,1,3,3,5,6};
+        int[] a = {0,1,2,3,4,5,-1, -1,};
 
         //switchFirstAndLast(a);
 
@@ -123,18 +123,19 @@ public class E01
 
         boolean hasDoublets = false;
 
-        int[] N = new int[array.length + 1];
-
-        for (int i = 0; i < array.length; i++)
+        // Compare index i to index j = i + 1 ,j = i + 2, j = i + 3, etc.
+        for (int i = 0; i < array.length - 1; i++)
         {
-            N[array[i]]++;
-
-            if (N[array[i]] > 1)
+            for (int j = i + 1; j < array.length; j++)
             {
-                hasDoublets = true;
+                if ( array[i] == array[j])
+                {
+                    return hasDoublets = true;
+                }
             }
         }
-        //printArray(N);
+
+        // printArray(array);
 
         return hasDoublets;
     }
