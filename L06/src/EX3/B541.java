@@ -20,10 +20,11 @@ public class B541
 
         int highestNumber = 0;
         int highestNumberAppearences = 0;
+        int currentNumber = 0;
 
         do {
 
-            int currentNumber = input.nextInt();
+            System.out.println(currentNumber);
 
             if (currentNumber > highestNumber) {
                 highestNumber = currentNumber;
@@ -32,12 +33,13 @@ public class B541
 
             }
 
-            if (currentNumber == highestNumber)
+            else if (currentNumber == highestNumber)
             {
                 highestNumberAppearences++;
             }
 
 
+            currentNumber = input.nextInt();
         } while (input.nextInt() != 0);
 
         System.out.println(highestNumber);
