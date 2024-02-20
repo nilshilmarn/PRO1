@@ -43,6 +43,10 @@ public class E01
             System.out.printf("%d", dieTosses[i]);
 
         }
+        if(inRun)
+        {
+            System.out.printf(")");
+        }
 
     }
 
