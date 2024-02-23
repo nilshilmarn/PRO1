@@ -6,8 +6,8 @@ public class E01
     public static void main(String[] args)
     {
 
-        int[] a = {1,4,9,16,9,7,4,9,11};
-        int[] b = {11,11,7,9,16,4,1};
+        int[] a = {1,2,3,4,5,6,7,9,11};
+        int[] b = {1,2,3,4,5,6,7};
 
         //System.out.println(equals(a,b));
 

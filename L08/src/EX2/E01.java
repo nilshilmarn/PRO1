@@ -11,18 +11,12 @@ public class E01
 
         int[] permutationArray = new int[10];
 
-        System.out.println(Arrays.toString(permutationArray));
-        System.out.println();
-
-
-
         int[] secondArray = {1,2,3,4,5,6,7,8,9,10};
 
-
-
-        System.out.println(Arrays.toString(secondArray));
+        System.out.println("Second Array: " + Arrays.toString(secondArray));
         System.out.println();
-
+        System.out.println("Permutation Array: " + Arrays.toString(permutationArray));
+        System.out.println();
 
         int removedElement = 0;
         int countOfRemainingElements = 10;
@@ -30,7 +24,6 @@ public class E01
 
         for (int i = 0; i < 10; i++)
         {
-
             // Pick a random position in the second array.
             int randomPosition = (int) (Math.random() * countOfRemainingElements); // 0-countoframiningNumbers
 
@@ -50,17 +43,16 @@ public class E01
             }
 
             secondArray[secondArray.length - 1] = 0;
+            countOfRemainingElements--;
 
-            System.out.println("Permutation Array: " + Arrays.toString(secondArray));
+            System.out.println("Second Array: " + Arrays.toString(secondArray));
+            System.out.println();
+            System.out.println("Permutation Array: " + Arrays.toString(permutationArray));
             System.out.println();
 
-            countOfRemainingElements--;
         }
 
-        System.out.println("Permutation Array: " + Arrays.toString(permutationArray));
-        System.out.println();
 
-        System.out.println("Second Array: " + Arrays.toString(secondArray));
 
 
     }

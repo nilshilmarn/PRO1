@@ -9,7 +9,7 @@ public class E01
     {
 
 
-        boolean[] doors = new boolean[10];
+        boolean[] doors = new boolean[100];
 
         //System.out.println(Arrays.toString(doors));
         //System.out.println();
