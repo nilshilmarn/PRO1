@@ -1,4 +1,4 @@
-package ex2student;
+package EX2;
 
 public class Employee {
     // The name of the employee.

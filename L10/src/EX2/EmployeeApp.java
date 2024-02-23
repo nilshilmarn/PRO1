@@ -1,4 +1,4 @@
-package ex2student;
+package EX2;
 
 public class EmployeeApp {
 

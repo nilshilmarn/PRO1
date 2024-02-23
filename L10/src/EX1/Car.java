@@ -1,4 +1,4 @@
-package ex1student;
+package EX1;
 
 public class Car {
     String brand;
