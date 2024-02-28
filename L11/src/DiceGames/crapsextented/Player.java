@@ -75,25 +75,25 @@ public class Player {
                 System.out.printf("Rolling... %d\n", currentPoint);
             }
 
-            if (playerWon(point, currentPoint) || playerLost(point, currentPoint))
+            if (playerWon(point, currentPoint) || playerLost(point, currentPoint)) // Check whether player wins or loses
             {
-                if (playerWon(point, currentPoint))
+                if (playerWon(point, currentPoint)) // Player wins
                 {
                     System.out.println("Player won");
                     gamesWon++;
                 }
-                else if (playerLost(point, currentPoint))
+                else if (playerLost(point, currentPoint)) // Player loses
                 {
                     System.out.println("Player lost");
                     gamesLost++;
                 }
                 System.out.println("Do you want to play again? (y/n)");
-                if (scanner.nextLine().equalsIgnoreCase("n")) {
+                if (scanner.nextLine().equalsIgnoreCase("n")) { // Asking if the player wants to play again or not.
                     System.out.printf("You WON %d round(s) and LOST %d round(s)\n", gamesWon, gamesLost);
                     pigIsPlaying = false;
                 }
             }
-            else
+            else // Roll again
             {
                 System.out.println("Roll again");
                 scanner.nextLine();
