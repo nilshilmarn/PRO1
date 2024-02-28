@@ -1,10 +1,10 @@
 # My First Semester of Computer Science
 
-Welcome to the repository for all exercises and projects related to the first semester of computer science.
+Welcome to the repository for all exercises and projects related to the first semester.
 
 ## Overview
 
-This repository contains a collection of exercises, projects, and resources that cover topics studied during the first semester of computer science education. Whether you're a student looking for additional practice or an educator seeking supplementary materials, you'll find a variety of content here to support your learning journey.
+This repository contains a collection of exercises, projects, and resources that cover topics studied during the first semester. Whether you're a student looking for additional practice or an educator seeking supplementary materials, you'll find a variety of content here to support your learning journey.
 
 ## Exercises
 
