@@ -7,12 +7,6 @@ public class Player {
     private Die diceOne = new Die();
     private Die diceTwo = new Die();
 
-    public Player()
-    {
-
-    }
-
-
     private boolean winningConditions(int point, int currentPoint)
     {
         boolean won;
