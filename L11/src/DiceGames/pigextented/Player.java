@@ -8,7 +8,6 @@ public class Player {
     private Die dieOne;
     private Die dieTwo;
     private int points;
-
     private int throwCount;
 
     public Player()
@@ -22,6 +21,10 @@ public class Player {
         return points;
     }
 
+    public int getThrowCount()
+    {
+        return throwCount;
+    }
 
     public void play() {
         Scanner scanner = new Scanner(System.in);
@@ -35,6 +38,7 @@ public class Player {
         {
             dieOne.roll(); // Roll the first die
             dieTwo.roll(); // Roll the second die
+            throwCount++;
             sum += dieOne.getFaceValue() + dieTwo.getFaceValue(); // Add the facevalues to the sum
             System.out.printf("Rolling... %d and %d\n", dieOne.getFaceValue(), dieTwo.getFaceValue());
             System.out.println("Round Points: " + sum);
