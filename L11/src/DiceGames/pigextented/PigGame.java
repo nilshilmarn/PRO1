@@ -14,12 +14,12 @@ public class PigGame {
         Scanner input = new Scanner(System.in);
         int winningPoints = input.nextInt();
 
-        pigGameStart(playerOne, playerTwo, winningPoints);
+        pigGame(playerOne, playerTwo, winningPoints);
 
     }
 
 
-    public static void pigGameStart(Player playerOne, Player playerTwo, int winningPoints)
+    public static void pigGame(Player playerOne, Player playerTwo, int winningPoints)
     {
         boolean won = false;
         int playerOneTurnCount = 0;
