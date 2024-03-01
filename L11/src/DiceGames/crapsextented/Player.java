@@ -92,6 +92,12 @@ public class Player {
                     System.out.printf("You WON %d round(s) and LOST %d round(s)\n", gamesWon, gamesLost);
                     pigIsPlaying = false;
                 }
+                else // If player want to play again reset values
+                {
+                    currentPoint = 0;
+                    rollCount = 0;
+                    point = 0;
+                }
             }
             else // Roll again
             {
