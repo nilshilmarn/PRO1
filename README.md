@@ -25,6 +25,7 @@ brief overview of each:
 - **L11**: Project: dice game
 - **L13**: Classes and objects
 - **L14**: ArrayList
+- **L15**: Recap
 
 Each folder contains exercises tailored to the corresponding lecture's topics, gradually increasing in complexity to
 challenge your understanding and skills.

@@ -40,7 +40,7 @@ public class EX4Test
 
         shiftElements(ints);
         System.out.println();
-        
+
         System.out.println(ints);
         System.out.println(hasDoublets(ints));
 
@@ -115,16 +115,9 @@ public class EX4Test
 
     public static void shiftElements(ArrayList<Integer> list)
     {
-        int lastElement = list.getLast();
-
-
-        for (int i = list.size() - 1; i > 0; i--)
-        {
-            list.set(i, list.get(i - 1));
-        }
-
-        list.set(0, lastElement);
-
+        int temp = list.remove(list.size() - 1);
+    
+        list.add(0, temp);
         System.out.println(list);
 
     }
