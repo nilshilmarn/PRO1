@@ -10,18 +10,22 @@ public class App
 
     public static void main(String[] args)
     {
+        Student s0 = new Student("Nils", false);
         Student s1 = new Student("Nils", true);
         Student s2 = new Student("Micheal", false);
         Student s3 = new Student("Mikkel", true);
         Student s4 = new Student("Mia", true);
         Student s5 = new Student("Mads", true);
         Student s6 = new Student("Magnus", false);
+        Student s7 = new Student("Nils", false);
 
         Team team1 = new Team("Team 1", "Room 1");
+        team1.addStudent(s0);
         team1.addStudent(s1);
         team1.addStudent(s2);
         team1.addStudent(s3);
         team1.addStudent(s4);
+        team1.addStudent(s7);
 
         Team team2 = new Team("Team 2", "Room 2");
         team2.addStudent(s1);
@@ -49,10 +53,15 @@ public class App
         team2.removeStudent("Nils");
         team2.removeStudent("Micheal");
 
-        System.out.println("The teams after Nils and Micheal have been removed");
+        System.out.println("The teams after all students names Nils and Micheal have been removed");
         System.out.println(team1);
         System.out.println(team2);
 
+        int[] grades = {4, 2, 12, 10, 7, -3};
 
+        System.out.println(s1);
+        System.out.println();
+
+        System.out.println("Higest Grade: " + s1.getHighestGrade());
     }
 }

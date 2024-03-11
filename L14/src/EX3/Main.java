@@ -29,6 +29,8 @@ public class Main
 
         System.out.println(team.calcAverageAge());
 
+        System.out.println(team.calcTotalScore());
+
         System.out.println(team.calcOldPlayersScore(2));
 
         System.out.println(team.maxScore());

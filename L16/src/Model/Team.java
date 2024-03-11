@@ -33,7 +33,6 @@ public class Team
             if (this.students.get(i).isActive())
             {
                 numberOfActiveStudents++;
-
             }
         }
         return numberOfActiveStudents;
@@ -53,9 +52,7 @@ public class Team
                 j++;
             }
         }
-
         return activeStudents;
-
     }
 
     public void removeStudent(String name)
@@ -67,6 +64,7 @@ public class Team
             if (students.get(i).getName().equals(name))
             {
                 students.remove(i);
+                i--;
             }
             i++;
         }
@@ -76,11 +74,10 @@ public class Team
     @Override
     public String toString()
     {
-        return "Team{" +
-                "name='" + name + '\'' +
-                ", room='" + room + '\'' +
-                ", students=" + students +
-                '}';
+        return "Team Info:" +
+                "\nName: " + name + " " +
+                "Room: " + room + " \n" +
+                "Students: " + students + "\n";
     }
 }
 
