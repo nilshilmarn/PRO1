@@ -26,6 +26,7 @@ brief overview of each:
 - **L13**: Classes and objects
 - **L14**: ArrayList
 - **L15**: Recap
+- **L16**: Projet: Classes and objects
 
 Each folder contains exercises tailored to the corresponding lecture's topics, gradually increasing in complexity to
 challenge your understanding and skills.
