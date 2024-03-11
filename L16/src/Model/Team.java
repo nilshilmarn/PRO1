@@ -23,19 +23,39 @@ public class Team
         students.add(student);
     }
 
-    public ArrayList<Student> getActiveStudents()
+
+    private int getNumberOfActiveStudents()
     {
-        ArrayList<Student> activeStudents = new ArrayList<>();
+        int numberOfActiveStudents = 0;
 
-        for (Student student : this.students)
+        for (int i = 0; i < students.size(); i++)
         {
-            if (student.isActive())
+            if (this.students.get(i).isActive())
             {
-                activeStudents.add(student);
-            }
+                numberOfActiveStudents++;
 
+            }
         }
+        return numberOfActiveStudents;
+    }
+
+    public Student[] getActiveStudents()
+    {
+        Student[] activeStudents = new Student[getNumberOfActiveStudents()];
+
+        int j = 0;
+
+        for (int i = 0; i <= activeStudents.length; i++)
+        {
+            if (this.students.get(i).isActive())
+            {
+                activeStudents[j] = this.students.get(i);
+                j++;
+            }
+        }
+
         return activeStudents;
+
     }
 
     public void removeStudent(String name)

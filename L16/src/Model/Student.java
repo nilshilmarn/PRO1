@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.Arrays;
+
 public class Student
 {
 
@@ -31,6 +33,7 @@ public class Student
         return "Student{" +
                 "name='" + name + '\'' +
                 ", active=" + active +
+                ", grades=" + Arrays.toString(grades) +
                 '}';
     }
 }

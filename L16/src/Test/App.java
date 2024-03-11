@@ -3,6 +3,8 @@ package Test;
 import Model.Student;
 import Model.Team;
 
+import java.util.Arrays;
+
 public class App
 {
 
@@ -36,8 +38,8 @@ public class App
 
 
         System.out.println("The active students on team 1 and team 2:");
-        System.out.println(team1.getActiveStudents());
-        System.out.println(team2.getActiveStudents());
+        System.out.println(Arrays.toString(team1.getActiveStudents()));
+        System.out.println(Arrays.toString(team2.getActiveStudents()));
         System.out.println();
 
 
