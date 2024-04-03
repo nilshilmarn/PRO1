@@ -17,6 +17,10 @@ public class Team
         this.students = new ArrayList<>();
     }
 
+    public String getName()
+    {
+        return name;
+    }
 
     // Tilføj også til Team en metode, der adderer en studerende til teamet.
     public void addStudent(Student student)

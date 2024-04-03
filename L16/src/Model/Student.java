@@ -18,7 +18,6 @@ public class Student
         this.answers = MultipleChoiseTest.getRandomAnswers();
     }
 
-
     public boolean isActive()
     {
         return active;

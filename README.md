@@ -27,6 +27,8 @@ brief overview of each:
 - **L14**: ArrayList
 - **L15**: Recap
 - **L16**: Projet: Classes and objects
+- **L18**: GUI
+- **L19**: GUI 2
 
 Each folder contains exercises tailored to the corresponding lecture's topics, gradually increasing in complexity to
 challenge your understanding and skills.
