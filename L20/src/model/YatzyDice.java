@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class YatzyDice
@@ -46,7 +47,7 @@ public class YatzyDice
      */
     public void resetThrowCount()
     {
-        // TODO
+        throwCount = 0;
     }
 
     /**
@@ -55,7 +56,14 @@ public class YatzyDice
      */
     public void throwDice(boolean[] holdStatus)
     {
-        // TODO
+        for (int i = 0; i < values.length; i++)
+        {
+            if (!holdStatus[i])
+            {
+                values[i] = random.nextInt(6) + 1;
+            }
+        }
+        throwCount++;
     }
 
     // -------------------------------------------------------------------------
@@ -68,20 +76,20 @@ public class YatzyDice
      */
     public int[] getResults()
     {
-        int[] results = new int[15];
+        int[] results = new int[16];
         for (int i = 1; i <= 6; i++)
         {
             results[i] = this.sameValuePoints(i);
         }
-        results[6] = this.onePairPoints();
-        results[7] = this.twoPairPoints();
-        results[8] = this.threeSamePoints();
-        results[9] = this.fourSamePoints();
-        results[10] = this.fullHousePoints();
-        results[11] = this.smallStraightPoints();
-        results[12] = this.largeStraightPoints();
-        results[13] = this.chancePoints();
-        results[14] = this.yatzyPoints();
+        results[7] = this.onePairPoints();
+        results[8] = this.twoPairPoints();
+        results[9] = this.threeSamePoints();
+        results[10] = this.fourSamePoints();
+        results[11] = this.fullHousePoints();
+        results[12] = this.smallStraightPoints();
+        results[13] = this.largeStraightPoints();
+        results[14] = this.chancePoints();
+        results[15] = this.yatzyPoints();
 
         return results;
     }
@@ -94,8 +102,13 @@ public class YatzyDice
     // Note: This method can be used in several of the following methods.
     private int[] frequency()
     {
-        //TODO
-        return null;
+        int[] frequency = new int[7];
+
+        for (int value : values)
+        {
+            frequency[value]++;
+        }
+        return frequency;
     }
 
     /**
@@ -105,8 +118,7 @@ public class YatzyDice
      */
     public int sameValuePoints(int value)
     {
-        // TODO
-        return 0;
+        return value * frequency()[value];
     }
 
     /**
@@ -115,8 +127,7 @@ public class YatzyDice
      */
     public int onePairPoints()
     {
-        // TODO
-        return 0;
+        return samePoints(2);
     }
 
     /**
@@ -127,7 +138,19 @@ public class YatzyDice
      */
     public int twoPairPoints()
     {
-        // TODO
+        for (int i = frequency().length - 1; i >= 0; i--)
+        {
+            if (frequency()[i] >= 2)
+            {
+                for (int j = i - 1; j >= 0; j--)
+                {
+                    if (frequency()[j] >= 2)
+                    {
+                        return i * 2 + j * 2;
+                    }
+                }
+            }
+        }
         return 0;
     }
 
@@ -137,8 +160,7 @@ public class YatzyDice
      */
     public int threeSamePoints()
     {
-        // TODO
-        return 0;
+        return samePoints(3);
     }
 
     /**
@@ -147,8 +169,7 @@ public class YatzyDice
      */
     public int fourSamePoints()
     {
-        // TODO
-        return 0;
+        return samePoints(4);
     }
 
     /**
@@ -158,8 +179,27 @@ public class YatzyDice
      */
     public int fullHousePoints()
     {
-        // TODO
-        return 0;
+        int threeValue = 0;
+        int pairValue = 0;
+
+        for (int i = frequency().length - 1; i >= 0; i--)
+        {
+            if (frequency()[i] == 3)
+            {
+                threeValue = i * 3;
+            } else if (frequency()[i] == 2)
+            {
+                pairValue = i * 2;
+            }
+        }
+
+        if (threeValue != 0 && pairValue != 0)
+        {
+            return threeValue + pairValue;
+        } else
+        {
+            return 0; // Not a full house
+        }
     }
 
     /**
@@ -168,8 +208,14 @@ public class YatzyDice
      */
     public int smallStraightPoints()
     {
-        // TODO
-        return 0;
+        for (int i = 1; i < frequency().length - 1; i++)
+        {
+            if (frequency()[i] != 1)
+            {
+                return 0;
+            }
+        }
+        return 15;
     }
 
     /**
@@ -178,8 +224,14 @@ public class YatzyDice
      */
     public int largeStraightPoints()
     {
-        // TODO
-        return 0;
+        for (int i = 2; i < frequency().length; i++)
+        {
+            if (frequency()[i] != 1)
+            {
+                return 0;
+            }
+        }
+        return 20;
     }
 
     /**
@@ -187,8 +239,12 @@ public class YatzyDice
      */
     public int chancePoints()
     {
-        // TODO
-        return 0;
+        int sum = 0;
+        for (int i = 0; i < values.length; i++)
+        {
+            sum += values[i];
+        }
+        return sum;
     }
 
     /**
@@ -197,7 +253,30 @@ public class YatzyDice
      */
     public int yatzyPoints()
     {
-        // TODO
+        for (int i = 1; i < frequency().length; i++)
+        {
+            if (frequency()[i] == 5)
+            {
+                return 50;
+            }
+        }
         return 0;
     }
+
+    /**
+     * Helper methods
+     */
+
+    private int samePoints(int value)
+    {
+        for (int i = frequency().length - 1; i >= 0; i--)
+        {
+            if (frequency()[i] >= value)
+            {
+                return i * value;
+            }
+        }
+        return 0;
+    }
+
 }

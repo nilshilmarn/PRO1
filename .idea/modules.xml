@@ -19,9 +19,11 @@
       <module fileurl="file://$PROJECT_DIR$/L18/L18.iml" filepath="$PROJECT_DIR$/L18/L18.iml" />
       <module fileurl="file://$PROJECT_DIR$/L19/L19.iml" filepath="$PROJECT_DIR$/L19/L19.iml" />
       <module fileurl="file://$PROJECT_DIR$/L20/L20.iml" filepath="$PROJECT_DIR$/L20/L20.iml" />
+      <module fileurl="file://$PROJECT_DIR$/L22/L22.iml" filepath="$PROJECT_DIR$/L22/L22.iml" />
       <module fileurl="file://$PROJECT_DIR$/Programmering1.iml" filepath="$PROJECT_DIR$/Programmering1.iml" />
       <module fileurl="file://$PROJECT_DIR$/studieStartsProeve/studieStartsProeve.iml" filepath="$PROJECT_DIR$/studieStartsProeve/studieStartsProeve.iml" />
       <module fileurl="file://$PROJECT_DIR$/tictactoe/tictactoe.iml" filepath="$PROJECT_DIR$/tictactoe/tictactoe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yatzyfinal/yatzyfinal.iml" filepath="$PROJECT_DIR$/yatzyfinal/yatzyfinal.iml" />
     </modules>
   </component>
 </project>

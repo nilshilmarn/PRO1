@@ -30,6 +30,8 @@ brief overview of each:
 - **L18**: GUI
 - **L19**: GUI 2
 - **L20**: Yatzy
+- **L21**: Yatzy
+- **L22**: Connections between classes
 
 Each folder contains exercises tailored to the corresponding lecture's topics, gradually increasing in complexity to
 challenge your understanding and skills.
