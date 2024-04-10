@@ -30,7 +30,7 @@ public class Swimmer
     {
         double bestLapTime = lapTimes.get(0);
 
-        for (int i = 1; i < lapTimes.size() - 1; i++)
+        for (int i = 1; i < lapTimes.size(); i++)
         {
             if (lapTimes.get(i) < bestLapTime)
             {

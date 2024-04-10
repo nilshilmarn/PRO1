@@ -11,7 +11,7 @@ public class SwimmerApp
     {
         ArrayList<Double> lapTimesJan = new ArrayList<>();
         lapTimesJan.addAll(List.of(1.02, 1.01, 0.99, 0.98, 1.02, 1.04, 0.99));
-
+        
         Swimmer jan = new Swimmer("Jan", lapTimesJan);
 
         ArrayList<Double> lapTimesBo = new ArrayList<>();

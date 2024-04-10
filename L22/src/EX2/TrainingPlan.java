@@ -7,13 +7,14 @@ public class TrainingPlan
     private char level;
     private int weeklyWaterHours;
     private int weeklyStrengthHours;
-    private final ArrayList<Swimmer> swimmers = new ArrayList<>();
+    private final ArrayList<Swimmer> swimmers;
 
     public TrainingPlan(char level, int weeklyWaterHours, int weeklyStrengthHours)
     {
         this.level = level;
         this.weeklyWaterHours = weeklyWaterHours;
         this.weeklyStrengthHours = weeklyStrengthHours;
+        this.swimmers = new ArrayList<>();
     }
 
     public char getLevel()

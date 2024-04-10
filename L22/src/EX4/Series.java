@@ -16,9 +16,9 @@ public class Series
         this.episodes = new ArrayList<>();
     }
 
-    public void addEpisode(int number, ArrayList<String> guestActors, int lengthMinutes)
+    public void addEpisode(Episode episode)
     {
-        episodes.add(new Episode(number, guestActors, lengthMinutes));
+        episodes.add(episode);
     }
 
 

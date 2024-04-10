@@ -8,6 +8,14 @@ public class Swimmer
     private ArrayList<Double> lapTimes;
     private TrainingPlan trainingPlan;
 
+
+    public Swimmer(String name, ArrayList<Double> lapTimes, TrainingPlan trainingPlan)
+    {
+        this.name = name;
+        this.lapTimes = lapTimes;
+        this.trainingPlan = trainingPlan;
+    }
+
     public Swimmer(String name, ArrayList<Double> lapTimes)
     {
         this.name = name;
@@ -31,7 +39,7 @@ public class Swimmer
     {
         double bestLapTime = lapTimes.get(0);
 
-        for (int i = 1; i < lapTimes.size() - 1; i++)
+        for (int i = 1; i < lapTimes.size(); i++)
         {
             if (lapTimes.get(i) < bestLapTime)
             {
