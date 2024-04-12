@@ -67,7 +67,14 @@ public class EmployeeWindow extends Stage
         pane.add(cbxCompany, 0, 4);
         cbxCompany.setOnAction(event ->
         {
-            cbHours.setDisable(false);
+            if (cbxCompany.isSelected())
+            {
+                cbHours.setDisable(false);
+            } else
+            {
+                cbHours.setDisable(true);
+            }
+
         });
 
         pane.add(cbHours, 0, 5);
@@ -123,11 +130,16 @@ public class EmployeeWindow extends Stage
 
         if (employee != null)
         {
+            var company = (Company) cbHours.getSelectionModel().getSelectedItem();
             // update existing employee
-            Controller.updateEmployee(employee, name, wage);
             if (cbxCompany.isSelected())
             {
-                Controller.addEmployeeToCompany((Company) cbHours.getSelectionModel().getSelectedItem(), employee);
+                Controller.addEmployeeToCompany(company, employee);
+                Controller.updateEmployee(employee, name, wage, company);
+            } else
+            {
+                Controller.removeEmployeeFromCompany(employee);
+                Controller.updateEmployee(employee, name, wage, null);
             }
 
         } else

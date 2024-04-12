@@ -71,10 +71,11 @@ public abstract class Controller
      * Update the employee.
      * Pre: name not empty, hours >= 0.
      */
-    public static void updateEmployee(Employee employee, String name, int wage)
+    public static void updateEmployee(Employee employee, String name, int wage, Company comapny)
     {
         employee.setName(name);
         employee.setWage(wage);
+        employee.setCompany(comapny);
     }
 
     public static ArrayList<Employee> getEmployees()

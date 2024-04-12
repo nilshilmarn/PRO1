@@ -89,7 +89,7 @@ public class EmployeePane extends GridPane
 
     private void createAction()
     {
-        EmployeeWindow dialog = new EmployeeWindow("Create Company", null);
+        EmployeeWindow dialog = new EmployeeWindow("Create Employee", null);
         dialog.showAndWait();
 
         // Wait for the modal dialog to close
